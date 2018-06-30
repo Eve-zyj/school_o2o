@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"    xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <meta charset="UTF-8">
+    <title>区域测试页面</title>
+</head>
+<body>
+<h3>区域o2o</h3>
+<h4>我的名字是<span th:text="${name}"></span> </h4>
+<table>
+    <p th:text="${areas.size()}"></p>
+    <hr/>
+    <p th:text="${area.areaName}"></p>
+
+    <p th:text="${areas.get(0).getAreaName()}"></p>
+    <hr/>
+    <p th:text="${areaName}"></p>
+    <li th:each="area : ${areas}">
+        <ul th:text="${area.areaName}"></ul>
+    </li>
+</table>
+</body>
+</html>
